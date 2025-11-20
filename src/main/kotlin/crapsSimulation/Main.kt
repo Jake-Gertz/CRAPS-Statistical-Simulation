@@ -1,4 +1,4 @@
-package org.example
+package crapsSimulation
 
 fun main() {
     val crapsRound = Craps(1000000000)

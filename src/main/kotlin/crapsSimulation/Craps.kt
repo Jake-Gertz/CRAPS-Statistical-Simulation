@@ -1,4 +1,4 @@
-package org.example
+package crapsSimulation
 
 class Craps(private val numRolls: Int) {
     private var numberOfSevens: Int = 0

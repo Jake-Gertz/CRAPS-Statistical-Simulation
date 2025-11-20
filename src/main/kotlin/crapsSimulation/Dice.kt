@@ -1,13 +1,13 @@
-package org.example
+package crapsSimulation
 
 import kotlin.random.Random
 
 class Dice {
     private var randomSeed: Int = Random.nextInt(40000)
+    private val rand = Random(randomSeed)
 
     fun roll(): Int {
-        val rolledNumber = Random(randomSeed).nextInt(6) + 1
-        randomSeed = Random.nextInt(40000)
+        val rolledNumber = rand.nextInt(1,7)
         return rolledNumber
     }
 }

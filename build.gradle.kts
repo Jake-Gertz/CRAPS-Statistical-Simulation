@@ -1,8 +1,9 @@
 plugins {
     kotlin("jvm") version "2.1.10"
+    id("application")
 }
 
-group = "org.example"
+group = "crapsSimulation"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -16,6 +17,11 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
-    jvmToolchain(23)
+    jvmToolchain(21)
+}
+
+application {
+    mainClass.set("crapsSimulation.MainKt")
 }
