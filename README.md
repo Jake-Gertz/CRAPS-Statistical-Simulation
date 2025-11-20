@@ -29,25 +29,18 @@ The simulation tracks not only the sum of the dice but also the specific combina
 ### Prerequisites
 
 You must have the Kotlin command-line compiler (`kotlinc`) and the Java Runtime Environment (JRE) installed.
+Also having a Java JDK between 17 and 23 is required!
 
 ### Compilation and Execution
 
-1.  **Compile the Project:**
-    Open your terminal, navigate to the directory containing the `.kt` files, and run the following command to compile them into a single JAR (Java Archive) file:
+1.  **Compile And Run The Project:**
+    After cloning the project open up a new terminal running git bash enter the command shown below. This will
+    both compile and run the program. The simulation might take a second to run given that the default number of rolls
+    to simulate 1 billion.
 
-    ```bash
-    kotlinc Main.kt Craps.kt Dice.kt -include-runtime -d CrapsSimulator.jar
+    ```bash 
+        ./gradlew run
     ```
-
-2.  **Run the Simulation:**
-    Once compiled, you can run the simulation using `java`:
-
-    ```bash
-    java -jar CrapsSimulator.jar
-    ```
-
-    The simulation will run (this may take some time given the 1 billion rolls) and then print the formatted statistical report to your console.
-
 ### Modifying the Number of Rolls
 
 To change the number of rolls, open `Main.kt` and edit the number passed to the `Craps` constructor:
@@ -61,5 +54,3 @@ fun main() {
     println(crapsRound.toString())
 }
 ```
-Note: Running the simulation for a large number of dice rolls will take a bit of time. 
-The default number of dice rolls to simulate is 1 billion.
