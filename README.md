@@ -60,3 +60,6 @@ fun main() {
     crapsRound.crapsGame()
     println(crapsRound.toString())
 }
+```
+Note: Running the simulation for a large number of dice rolls will take a bit of time. 
+The default number of dice rolls to simulate is 1 billion.
